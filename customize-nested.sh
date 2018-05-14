@@ -15,6 +15,10 @@ echo "Setting Mac to follow NIC"
 echo "Removing the UUID"
 sed -e "/\/system\/uuid/d" -e /etc/vmware/esx.conf 
 
+echo "Removing SSL certificates"
+rm "/etc/vmware/ssl/rui.crt"
+rm "/etc/vmware/ssl/rui.key"
+
 echo "Run auto-backup"
 /sbin/auto-backup.sh
 
@@ -48,6 +52,9 @@ echo "Creating the Management Network"
 echo "Restarting Management Agents"
 /etc/init.d/hostd restart
 /etc/init.d/vpxa restart 
+
+echo "Generating SSL keys"
+/bin/generate-certificates
 
 echo "=== End of Post-Freeze ==="
 
