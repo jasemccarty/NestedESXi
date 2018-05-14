@@ -2,7 +2,7 @@ customize-nested.sh - Nested ESXi customization script
 clonenested.ps1 - Deploy X Nested ESXi VMs from a Nested ESX*
 
 
-* Requires ESXi 6.7, PowerCLI 10.1, and my SC/2N Module (https://code.vmware.com/samples/3734
+* Requires ESXi 6.7, PowerCLI 10.1, and my SC/2N Module (https://code.vmware.com/samples/3734)
 
 1. Load a Nested ESXi host on an ESXi 6.7 host** 
 2. Copy customize-nested.sh to /tmp/
